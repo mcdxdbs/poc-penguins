@@ -9,7 +9,7 @@
 
 # BoardGames through the Ages
 
-`BoardGames Through the Ages` is a Proof of Concept (PoC project made by Team Penguin for Daugherty University. <br />
+`BoardGames Through the Ages` is a Proof of Concept (PoC) project made by Team Penguin for Daugherty University. <br />
 Team Penguin comprises of a Business Analtyics and a Data Engineering student.
 
 Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek) for our PoC project.
@@ -35,7 +35,73 @@ Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-dat
 # DDL
 
 The Data Definition Language (DDL) was written inside of the notebook to create the tables required for the loading of the data. 
-First,
+After cleaning the data and merging some tables we were able to have a flat table to work form. 
+This was the first table incorporated into the database as a starting point.
+
+```sql   
+CREATE TABLE games_flat(
+  bggid integer PRIMARY KEY,
+  name text,
+  yearpublished int,
+  category text,
+  mfgplaytime int,
+  minplayers int,
+  maxplayers int,
+  avgrating real,
+  mfgagerec int,
+  numuserratings int
+  );
+```
+
+Then we cut the flat table into smaller tables: games, users, ratings, playtime, and category.
+
+```sql
+CREATE TABLE games(
+  bggid integer PRIMARY KEY,
+  name text,
+  yearpublished int,
+  mfgagerec int
+  );
+        
+CREATE TABLE users(
+  bggid integer PRIMARY KEY,
+  minplayers integer,
+  maxplayers integer
+  );
+        
+CREATE TABLE ratings (
+  bggid integer PRIMARY KEY,
+  avgrating INTEGER,
+  numuserratings INTEGER
+  );
+            
+CREATE TABLE playtime(
+  BGGId integer PRIMARY KEY,
+  MfgPlaytime INTEGER
+);
+        
+CREATE TABLE category(
+  BGGId integer PRIMARY KEY,
+  category text
+);        
+ ```
+ 
+In order to connect to the postggres databse from the jupyter notebook, `psycopg2` was used.
+A connection was made including the host, database name, user, and password.
+The user and password was made beforehand in pgadmin 4 which allowed access into the database.
+
+You may use a different platform so your steps may be different, but here are the generalized steps to  create a new role if you do not wish to use your own username and password to connect. <br />
+
+These are the steps to create a new role in pgadmin4:
+1. Open your platform and database, find the Login/Group Roles.
+2. Right lick - Create - Login/Group Role
+3. General Tab - Enter a name
+4. Defintion Tab - Enter a password
+5. Priveledges Tab - Allow "Can Login?" - the others are optional
+6. Right click on your database and change the Owner to the new login role you created.
+
+Your database should now be ready to link with the notebook.
+
 
 # Notebook
 
@@ -43,6 +109,9 @@ This monstrous dataset Team Penguin came across was the ultimate repository for 
 
 We started with about 29 thousand rows. 
 It was a massive file, categories
+
+You may need to change the login creditionals for psycopg2 in order for the notebook and databse to link togeher.
+
 
 # Issues and TO DOs
 
