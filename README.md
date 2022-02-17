@@ -1,4 +1,4 @@
-- [BoardGames through the Ages](#boardgames-through-the-ages)
+- [Board Games through the Ages](#boardgames-through-the-ages)
 - [Data Profiling](#data-profile)
 - [Concept Model](#concept-model)
 - [DDL](#ddl)
@@ -7,9 +7,9 @@
 
 ---
 
-# BoardGames through the Ages
+# Board Games through the Ages
 
-`BoardGames Through the Ages` is a Proof of Concept (PoC) project made by Team Penguin for Daugherty University. <br />
+`Board Games Through the Ages` is a Proof of Concept (PoC) project made by Team Penguin for Daugherty University. <br />
 Team Penguin comprises of a Business Analtyics and a Data Engineering student.
 
 Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek) for our PoC project.
@@ -40,16 +40,16 @@ This was the first table incorporated into the database as a starting point.
 
 ```sql   
 CREATE TABLE games_flat(
-  bggid integer PRIMARY KEY,
-  name text,
-  yearpublished int,
-  category text,
-  mfgplaytime int,
-  minplayers int,
-  maxplayers int,
-  avgrating real,
-  mfgagerec int,
-  numuserratings int
+  bggid INTEGER, PRIMARY KEY,
+  name TEXT,
+  yearpublished INTEGER,,
+  category TEXT,
+  mfgplaytime INTEGER,,
+  minplayers INTEGER,,
+  maxplayers INTEGER,,
+  avgrating REAL,
+  mfgagerec INTEGER,,
+  numuserratings INTEGER,
   );
 ```
 
@@ -57,32 +57,32 @@ Then we cut the flat table into smaller tables: games, users, ratings, playtime,
 
 ```sql
 CREATE TABLE games(
-  bggid integer PRIMARY KEY,
-  name text,
-  yearpublished int,
-  mfgagerec int
+  bggid INTEGER PRIMARY KEY,
+  name TEXT,
+  yearpublished INTEGER,
+  mfgagerec INTEGER
   );
         
 CREATE TABLE users(
-  bggid integer PRIMARY KEY,
-  minplayers integer,
-  maxplayers integer
+  bggid INTEGER PRIMARY KEY,
+  minplayers INTEGER,
+  maxplayers INTEGER
   );
         
 CREATE TABLE ratings (
-  bggid integer PRIMARY KEY,
+  bggid INTEGER PRIMARY KEY,
   avgrating INTEGER,
   numuserratings INTEGER
   );
             
 CREATE TABLE playtime(
-  BGGId integer PRIMARY KEY,
+  BGGId INTEGER PRIMARY KEY,
   MfgPlaytime INTEGER
 );
         
 CREATE TABLE category(
   BGGId integer PRIMARY KEY,
-  category text
+  category TEXT
 );        
  ```
  
