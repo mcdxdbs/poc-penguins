@@ -116,7 +116,7 @@ You may need to change the login creditionals for psycopg2 in order for the note
 # Issues and TO DOs
 
 Tighten/Loosen requirements for games thus having a smaller/larger set of data to work with. <br />
-Analyze further detail about the games high correltation.<br />
+Analyze further detail about the games high correlation.<br />
 Possible: 
 - MfgPlaytime vs AvgRating
 - MfgAgeRec vs AvgRating
