@@ -26,7 +26,7 @@ Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-dat
 - Visualizations using PowerBI.
 
 # Data Profile
-![image](https://user-images.githubusercontent.com/99750060/154522627-b1a0c52f-4bd3-4857-b762-35bdb1ad380a.png)
+![image](https://user-images.githubusercontent.com/99750060/154560129-4485fde1-1c6b-49ca-ba6b-4c28efa34ecb.png)
 
 
 # Concept Model
@@ -94,10 +94,10 @@ You may use a different platform so your steps may be different, but here are th
 
 These are the steps to create a new role in pgadmin4:
 1. Open your platform and database, find the Login/Group Roles.
-2. Right lick - Create - Login/Group Role
+2. Right click - Create - Login/Group Role
 3. General Tab - Enter a name
 4. Defintion Tab - Enter a password
-5. Priveledges Tab - Allow "Can Login?" - the others are optional
+5. Privledges Tab - Allow "Can Login?" - the others are optional
 6. Right click on your database and change the Owner to the new login role you created.
 
 Your database should now be ready to link with the notebook.
@@ -107,10 +107,12 @@ Your database should now be ready to link with the notebook.
 
 This monstrous dataset Team Penguin came across was the ultimate repository for boardgames throughout human history. Tens of thousands of rows that included ranks, categories, recommended timeframe and user age, ratings, and expansive columns that described each board game and the year it was published. From how this dataset is being described, you can probably guess that there was just an overwhelming load of information. A lot we didn't need in order to portray our goal as a team. We wanted to deliver a complete and fully saturated file of thousands of games without running into blank spaces and disingenuous information. 
 
-We started with about 29 thousand rows. 
-It was a massive file, categories
+Some problems we encountered:
+-We started with about 29 thousand rows. 
+-It was a massive file, categories and ranks of each game was in binary format, so each game was not assigned one category or one rank, it was assigned several and sometimes no category at all. 
+Hundreds of games that were published in the year "0" was due to they were not assigned a year to begin with. 
 
-You may need to change the login creditionals for psycopg2 in order for the notebook and databse to link togeher.
+You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
 # Issues and TO DOs
