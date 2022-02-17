@@ -110,7 +110,7 @@ This monstrous dataset Team Penguin came across was the ultimate repository for 
 Some problems we encountered:
 -We started with about 29 thousand rows. 
 -It was a massive file, categories and ranks of each game was in binary format, so each game was not assigned one category or one rank, it was assigned several and sometimes no category at all. 
-Hundreds of games that were published in the year "0" was due to they were not assigned a year to begin with. 
+Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
 
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
