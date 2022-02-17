@@ -1,4 +1,4 @@
-- [Board Games through the Ages](#boardgames-through-the-ages)
+- [Board Games through the Ages](#board-games-through-the-ages)
 - [Data Profiling](#data-profile)
 - [Concept Model](#concept-model)
 - [DDL](#ddl)
@@ -9,7 +9,7 @@
 
 # Board Games through the Ages
 
-`Board Games Through the Ages` is a Proof of Concept (PoC) project made by Team Penguin for Daugherty University. <br />
+`Board Games through the Ages` is a Proof of Concept (PoC) project made by Team Penguin for Daugherty University. <br />
 Team Penguin comprises of a Business Analtyics and a Data Engineering student.
 
 Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek) for our PoC project.
@@ -114,6 +114,16 @@ You may need to change the login creditionals for psycopg2 in order for the note
 
 
 # Issues and TO DOs
+
+Tighten/Loosen requirements for games thus having a smaller/larger set of data to work with.
+Analyze further detail about the games high correltation.
+Possible: 
+- MfgPlaytime vs AvgRating
+- MfgAgeRec vs AvgRating
+- MinPlayers or MaxPLayers vs AvgRating
+- -MinPLayer/MaxPLayer vs Category
+
+
 
 
 
