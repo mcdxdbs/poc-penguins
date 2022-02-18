@@ -26,8 +26,7 @@ Selected a dataset from [Kaggle](https://www.kaggle.com/threnjen/board-games-dat
 - Visualizations using PowerBI.
 
 # Data Profile
-![image](https://user-images.githubusercontent.com/99750060/154560129-4485fde1-1c6b-49ca-ba6b-4c28efa34ecb.png)
-
+![image](https://user-images.githubusercontent.com/99750060/154721747-5eb9b8c7-3394-4d24-919b-3123e72aa9af.png)
 
 # Concept Model
 ![image](https://user-images.githubusercontent.com/99750060/154523366-5aae4e38-6ff4-4ab5-b321-25434b098204.png)
@@ -141,11 +140,12 @@ You may need to change the login credentials for psycopg2 in order for the noteb
 
 Tighten/Loosen requirements for games thus having a smaller/larger set of data to work with. <br />
 Analyze further detail about the games high correlation.<br />
-Possible: 
+Possible Visuals & Analyses: 
 - MfgPlaytime vs AvgRating
 - MfgAgeRec vs AvgRating
 - MinPlayers or MaxPLayers vs AvgRating
 - MinPLayer/MaxPLayer vs Category
+- AvgRating vs NumUserRatings
 
 
 
