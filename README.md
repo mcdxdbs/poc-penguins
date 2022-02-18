@@ -131,7 +131,7 @@ Some problems we encountered:
 - Other columns that were deleted: StdDev, ComAgeRec, LanguageEase, GameWeight, BayesAvgRating, NumOwned,NumWant, NumWish, NumWeightVotes, NumComments, NumAlternates,  NumExpansions, NumImplementations, IsReimplementation, Family, Kickstarted, ImagePath
 - Polished the remaining columns and made parameters for the following: yearpublished, maxplayers, minplayers
 
-<br \>
+<br />
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
