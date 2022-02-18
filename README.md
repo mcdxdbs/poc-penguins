@@ -44,13 +44,28 @@ CREATE TABLE games_flat(
   name TEXT,
   yearpublished INTEGER,,
   category TEXT,
-  mfgplaytime INTEGER,,
-  minplayers INTEGER,,
-  maxplayers INTEGER,,
+  mfgplaytime INTEGER,
+  minplayers INTEGER,
+  maxplayers INTEGER,
   avgrating REAL,
-  mfgagerec INTEGER,,
+  mfgagerec INTEGER,
   numuserratings INTEGER,
   );
+```
+
+```
+games_flat
+	BGGId			BoardGameGeek game ID
+	Name			Name of game
+	YearPublished		First year game published
+	Category		Category the game falls under
+	MfgPlayTime		Manufacturer Stated Play Time
+	MinPlayers		Minimum number of players
+	MaxPlayers		Maximun number of players
+	AvgRatings		Average user rating for game
+	MfgAgeRecs		Manufacturer Age Recommendation
+	NumUserRatingss		Number of user ratings
+	
 ```
 
 Then we cut the flat table into smaller tables: games, users, ratings, playtime, and category.
@@ -103,6 +118,7 @@ These are the steps to create a new role in pgadmin4:
 Your database should now be ready to link with the notebook.
 
 
+
 # Notebook
 
 This monstrous dataset Team Penguin came across was the ultimate repository for boardgames throughout human history. Tens of thousands of rows that included ranks, categories, recommended timeframe and user age, ratings, and expansive columns that described each board game and the year it was published. From how this dataset is being described, you can probably guess that there was just an overwhelming load of information. A lot we didn't need in order to portray our goal as a team. We wanted to deliver a complete and fully saturated file of thousands of games without running into blank spaces and disingenuous information. 
@@ -113,7 +129,6 @@ Some problems we encountered:
 - Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
 - There were many columns deleted, such as community playtimes, best players, good players
 - Other columns that were deleted: StdDev, ComAgeRec, LanguageEase, GameWeight, BayesAvgRating, NumOwned,NumWant, NumWish, NumWeightVotes, NumComments, NumAlternates,  NumExpansions, NumImplementations, IsReimplementation, Family, Kickstarted, ImagePath
-- Polished the remaining columns and made parameters for the following: yearpublished, maxplayers, minplayers
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
