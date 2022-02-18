@@ -129,9 +129,11 @@ Some problems we encountered:
 - Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
 - There were many columns deleted, such as community playtimes, best players, good players
 - Other columns that were deleted: StdDev, ComAgeRec, LanguageEase, GameWeight, BayesAvgRating, NumOwned,NumWant, NumWish, NumWeightVotes, NumComments, NumAlternates,  NumExpansions, NumImplementations, IsReimplementation, Family, Kickstarted, ImagePath
-- Polished the remaining columns and made parameters for the following: yearpublished, maxplayers, minplayers
+- Polished the remaining columns and made appropriate parameters and other adjustments for the following: maxplayers, minplayers, mfgplaytime (manufacturing playtime), mfgagerec (manufacturing age recommendation). This includes deleting 0 minimum and maximum players and not exceeding 21. Playtime had to be more than 0 but less than 201 minutes, and lastly, age had to be more than 0. 
+- The resulting number of rows came to be just over 7 thousand.
 
-<br />
+
+<br \>
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
