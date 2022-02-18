@@ -108,10 +108,11 @@ Your database should now be ready to link with the notebook.
 This monstrous dataset Team Penguin came across was the ultimate repository for boardgames throughout human history. Tens of thousands of rows that included ranks, categories, recommended timeframe and user age, ratings, and expansive columns that described each board game and the year it was published. From how this dataset is being described, you can probably guess that there was just an overwhelming load of information. A lot we didn't need in order to portray our goal as a team. We wanted to deliver a complete and fully saturated file of thousands of games without running into blank spaces and disingenuous information. 
 
 Some problems we encountered:
--We started with about 29 thousand rows. 
--It was a massive file, categories and ranks of each game was in binary format, so each game was not assigned one category or one rank, it was assigned several and sometimes no category at all. 
-Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
-
+- We started with about 29 thousand rows and over 48 columns... 
+- It was a massive file, categories and ranks of each game was in binary format, so each game was not assigned one category or one rank, it was assigned several and sometimes no    category at all. 
+- Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
+- There were many columns deleted, such as community playtimes, best players, good players
+- Other columns that were deleted: StdDev, ComAgeRec, LanguageEase, GameWeight, BayesAvgRating, NumOwned,NumWant, NumWish, NumWeightVotes, NumComments, NumAlternates,  NumExpansions, NumImplementations, IsReimplementation, Family, Kickstarted, ImagePath
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
