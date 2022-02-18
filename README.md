@@ -113,6 +113,7 @@ Some problems we encountered:
 - Hundreds of games that were published in the year "0" was due to not being assigned a year to begin with. 
 - There were many columns deleted, such as community playtimes, best players, good players
 - Other columns that were deleted: StdDev, ComAgeRec, LanguageEase, GameWeight, BayesAvgRating, NumOwned,NumWant, NumWish, NumWeightVotes, NumComments, NumAlternates,  NumExpansions, NumImplementations, IsReimplementation, Family, Kickstarted, ImagePath
+- Polished the remaining columns and made parameters for the following: yearpublished, maxplayers, minplayers
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
