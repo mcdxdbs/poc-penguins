@@ -133,7 +133,7 @@ Some problems we encountered:
 - The resulting number of rows came to be just over 7 thousand.
 
 
-<br \>
+<br />
 You may need to change the login credentials for psycopg2 in order for the notebook and databse to link together.
 
 
