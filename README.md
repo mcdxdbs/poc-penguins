@@ -138,7 +138,7 @@ You may need to change the login credentials for psycopg2 in order for the noteb
 
 # Issues and TO DOs
 
-We downsized our data tremendously, so as a result it most likely scewed our data. If were to approach this data set again, we would try to retain as much data as possible while keeping the data consistent and valid. 
+We downsized our data tremendously, so as a result it most likely scewed our data. If we were to approach this kaggle file again, we would try to retain as much information as possible while keeping the data consistent and valid. 
 
 Tighten/Loosen requirements for games thus having a smaller/larger set of data to work with. <br />
 Analyze further detail about the games high correlation.<br />
